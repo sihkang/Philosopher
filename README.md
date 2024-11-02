@@ -49,7 +49,7 @@ ex)
 
 # Result
 case : 10명, 수명 410ms, 식사 200ms, 수면 200ms, 10 회 식사
-![alt text](./images/result.png)
+![alt text](./images/image.png)
 
 extreme case : 199명, 810ms, 300ms, 300ms, 10회
 
