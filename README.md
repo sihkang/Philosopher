@@ -9,7 +9,7 @@ mutex, semaphore를 활용한 멀티쓰레딩을 통해 각 쓰레드/프로세�
 - No leaks (Memory management)
 - No global variables
 - No data race
-- 최소 입력 시간 60ms 이상. 최대 철학자 수 200명 미만.
+- 최소 입력 시간 60ms 이상.
 
 # constraints
 - 하나 이상의 철학자가 원탁에 앉는다.
@@ -40,6 +40,9 @@ make bonus	 // for bonus
 - time_to_sleep (in milliseconds): 철학자가 자는데 걸리는 시간
 - number_of_times_each_philosopher_must_eat (optional argument): 모든 철학자가 해당 인자만큼 식사를 했다면 프로그램은 종료된다.
 
+3. debug option
+gcc compiler option : -fsanitize=thread
+
 ex)
 ```
 ./philo 10 410 200 200 5
@@ -48,9 +51,8 @@ ex)
 ![alt text](./images/화면-기록-2024-11-02-오후-5.04.09.gif)
 
 # Result
-case : 10명, 수명 410ms, 식사 200ms, 수면 200ms, 10 회 식사
+even case : 10명, 수명 410ms, 식사 200ms, 수면 200ms, 10 회 식사 
 ![alt text](./images/image.png)
 
-extreme case : 199명, 810ms, 300ms, 300ms, 10회
-
-#
+odd case : 199명, 810ms, 300ms, 300ms, 10회 
+![Alt text](./images/odd.png)
